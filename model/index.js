@@ -27,7 +27,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.blogs = require("./blogModels.js")(sequelize, DataTypes);
+db.blogs = require("./blogsModel.js")(sequelize, DataTypes);
 
 db.sequelize.sync({ force: false }).then(() => {
   console.log("yes re-sync done");
